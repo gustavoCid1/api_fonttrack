@@ -64,7 +64,7 @@ router.put('/usuarios/:id', (req, res) => {
 // Eliminar un registro en tb_users
 router.delete('/usuarios/:id', (req, res) => {
   const id = req.params.id;
-  connection.query('DELETE FROM tb_usuarios WHERE id_usuario = ?', id, (err, results) => {
+  connection.query('DELETE FROM tb_users WHERE id_usuario = ?', id, (err, results) => {
     if (err) {
       console.error('Error al eliminar el registro:', err);
       res.status(500).json({ error: 'Error al eliminar el registro' });
